@@ -1,0 +1,335 @@
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+header {
+    background-color: #ffebd6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Общий отступ */
+}
+
+header button:last-child {
+    margin-right: 0; /* Убираем отступ у последней кнопки */
+}
+
+header button:hover {
+    background-color: #e64a19;
+}
+
+.header-left, .header-right {
+    display: flex;
+    gap: 10px;
+}
+
+header .title-container {
+    text-align: center;
+    flex-grow: 1;
+}
+
+header h1 {
+    color: orange;
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+}
+marquee {
+    background-color: rgba(216, 191, 216);
+    padding: 15px;
+    font-size: 1.5em;
+    color: black;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.services {
+	background: #b8a2c8;
+	background-color: rgba(148, 50, 150,);
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 15px;
+    max-width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services h2 {
+    color: #388E3C;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.services p {
+    color: #424242;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.gallery-vertical img {
+    max-width: 80%; /* Изображения будут занимать 80% ширины своего контейнера */
+    height: auto;   /* Высота будет автоматически подстраиваться */
+    object-fit: cover; /* Для обрезки изображения ровно по краям контейнера */
+}
+
+/* Увеличение Gap для изображений */
+.gallery-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Пример для уменьшения всех изображений */
+img {
+    max-width: 50%; /* Установите подходящие значение */
+    height: auto;
+}
+
+/* Или для конкретной галереи */
+.gallery-vertical img {
+    max-width: 75%;
+    height: auto;
+}
+
+.ad-image {
+    width: 90%;
+    border: 1px solid #8E24AA;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для Индивидуальных букетов */
+.services1 {
+	background: #a8a2d9;
+	background-color: rgba(148, 10, 150,);
+    border: 5px solid #559;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.services1 h3 {
+    color: #FF8F00;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.services1 p {
+    color: #424242;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Стили для Оформления мероприятий */
+.services2 {
+	background: #c8a2c8;
+	background-color: rgba(148, 50, 150,);z
+    border: 5px solid #090;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.services2 h3 {
+    color: #D84315;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.services2 p {
+    color: #424242;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.services h2 {
+    color: #9400D3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;  /* Отображение как блок */
+    margin-top: 10px;  /* Отступ сверху */
+}
+
+form input {
+    width: calc(100% - 22px);  /* Полная ширина минус внутренние отступы */
+    padding: 10px;  /* Внутренние отступы */
+    margin-top: 5px;  /* Отступ сверху */
+    margin-bottom: 20px;  /* Отступ снизу */
+    border: 1px solid #ccc;  /* Граница */
+    border-radius: 5px;  /* Закругленные углы */
+}
+
+form button {
+    background-color: #9400D3;  /* Цвет фона кнопки */
+    color: white;  /* Цвет текста */
+    border: none;  /* Удаление границы */
+    padding: 10px 20px;  /* Внутренние отступы */
+    cursor: pointer;  /* Курсор в виде указателя */
+    border-radius: 5px;  /* Закругленные углы */
+    width: 100%;  /* Полная ширина */
+}
+
+form button:hover {
+    background-color: rgba(148, 0, 211, 0.6);  /* Цвет кнопки при наведении */
+}
+
+body {
+    background-color: rgba(148, 0, 211, 0.4);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-bottom: 2px solid #9400D3;
+}
+
+.header-left, .header-right {
+    display: flex;
+    gap: 10px;
+}
+
+.title-container h1 {
+    margin: 0;
+    color: #9400D3;
+}
+
+button {
+    background-color: #9400D3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(148, 0, 211, 0.6);
+}
+
+.news-item {
+    background-color: #b8a2c8;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-content {
+    background-image: url('contact.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+table {
+    color: white;
+    background: #c8a2c8;
+    width: 100%; /* Возможность адаптироваться к ширине контейнера */
+    border-collapse: collapse; /* Убираем расстояние между ячейками для компактности */
+}
+
+/* Стиль заголовков таблицы */
+th {
+    background: #9b82a1; /* Немного темнее основной фон для контраста */
+    padding: 10px; /* Внутренний отступ для улучшения восприятия */
+    text-align: center; /* Выравнивание текста по левому краю */
+	color:black;
+}
+
+/* Стиль для строк таблицы */
+td {
+    padding: 10px; /* Внутренний отступ для улучшения восприятия */
+    border-bottom: 1px solid #fff; /* Снизу добавим тонкую границу для разделения строк */
+	text-align: center; /* Выравнивание текста по левому краю */
+}
+
+/* Дополнительный стиль для чередующихся строк для улучшения читабельности */
+tr:nth-child(even) {
+    background: #b392b3; /* Цвет немного темнее основного фона */
+}
+
+h4 {
+    color: black;
+    text-align: center;
+}
